@@ -1,0 +1,31 @@
+west:
+  url: https://github.com/zephyrproject-rtos/west
+  revision: v0.6.0
+
+manifest:
+  remotes:
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+    - name: board_nrf9160
+      url-base: git@gitlab.osmos-dev.com:systemesembarques/ltem_project
+    - name: board_nrf52832
+      url-base: git@gitlab.osmos-dev.com:systemesembarques/ltem_project
+  projects:
+    - name: nrf
+      remote: ncs
+      revision: v1.8.0
+      repo-path: sdk-nrf
+      import:
+        path-prefix: external/sdk
+    - name: osmos_nrf9160_bsp
+      remote: board_nrf9160
+      repo-path: osmos_nrf9160_bsp
+      revision: main
+      path: external/sdk/zephyr/boards/arm/osmos_nrf9160
+    - name: osmos_nrf52832_bsp
+      remote: board_nrf52832
+      repo-path: osmos_nrf52832_bsp
+      revision: main
+      path: external/sdk/zephyr/boards/arm/osmos_nrf52832
+  self:
+    path: manifest-repo

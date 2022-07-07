@@ -1,0 +1,5 @@
+[manifest]
+path = manifest
+[zephyr]
+base = external/sdk/zephyr
+base-prefer = configfile
