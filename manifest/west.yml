@@ -17,15 +17,5 @@ manifest:
       repo-path: sdk-nrf
       import:
         path-prefix: external/sdk
-    - name: osmos_nrf9160_bsp
-      remote: board_nrf9160
-      repo-path: osmos_nrf9160_bsp
-      revision: main
-      path: external/sdk/zephyr/boards/arm/osmos_nrf9160
-    - name: osmos_nrf52832_bsp
-      remote: board_nrf52832
-      repo-path: osmos_nrf52832_bsp
-      revision: main
-      path: external/sdk/zephyr/boards/arm/osmos_nrf52832
   self:
     path: manifest-repo
